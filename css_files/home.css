@@ -100,6 +100,7 @@ body {
     display: flex;
   }
 
+
   /*animation for menu on click*/
   
   .bar1{
@@ -185,12 +186,14 @@ hr {
   }
   .main-item1 > p {
     padding: 0;
-    margin: 0.4rem;
+    margin: 0.9rem;
+    
   }
   hr {
     display: block;
     width: 300px;
   }
+ 
   .main-section {
     flex-flow: column-reverse;
     align-items: center;
