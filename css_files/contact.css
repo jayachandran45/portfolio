@@ -133,6 +133,7 @@
       padding: 5px 0 0 0;
       background-color: #2b2929;
       border-bottom:1px solid #3e3b3b;
+      z-index: 1;
     }
   }
 
@@ -235,6 +236,7 @@ input:focus,textarea:focus{
     }
     .contact-flex-container{
         flex-direction: column;
+        margin-top: 2.3rem;
     }
     iframe{
         height: 15rem;
