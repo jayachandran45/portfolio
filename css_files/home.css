@@ -1,0 +1,255 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* creating variable for use it in multiple places */
+:root {
+  --primary-bg-color: #222222;
+  --primary-text-font-color: #ffffffc0;
+  --heading-text-font-color: #fff;
+  --link-before-hover: #95989e;
+}
+/* style for whole body */
+body {
+  font-family: "poppins", Helvetica, sans-serif;
+  color: var(--primary-text-font-color);
+  background-color: var(--primary-bg-color);
+}
+/* Navigation header container styles */
+.header{
+  margin: 1rem;
+}
+.logoimg {
+  width: 2.5rem;
+  border-radius: 50%;
+  margin-left: 1rem;
+}
+.nav-container {
+  display: flex;
+  align-items: center;
+  background-color: var(--primary-bg-color);
+  margin-top: 5px;
+}
+.logotext {
+  flex: 1;
+  margin-bottom: 3px;
+  margin-left: 0.3rem;
+  color: var(--heading-text-font-color);
+}
+.nav-links > span {
+  margin-right: 2rem;
+}
+.nav-link {
+  text-decoration: none;
+  color: #95989e;
+}
+.nav-links > span > a:hover {
+  color: #fff;
+}
+
+/* for hamburger btn through css only */
+.menu-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 2rem;
+  margin-right: 1rem;
+  border-radius: 10%;
+}
+.menu-btn:hover {
+  background-color: rgba(212, 188, 188, 0.219);
+}
+.bar {
+  width: 30px;
+  background-color: var(--heading-text-font-color);
+  height: 4px;
+  border-radius: 10%;
+  margin: 3px 6px;
+  transition:.5s ;
+}
+.menu-btn {
+  display: none;
+}
+
+/* for mobile responsive nav bar*/
+/* using media query for to look good for small screens */
+@media (max-width: 500px) {
+  .header{
+    margin: 0;
+  }
+  .nav-links {
+    position: fixed;
+    height: 100vh;
+    top: 50px;
+    right: -150px;
+    background-color: var(--primary-bg-color);
+    display: flex;
+    flex-direction: column;
+    transition: 1s;
+  }
+
+  .nav-links > span {
+    margin-right: 0;
+  }
+  .nav-links > span > a {
+    display: block;
+    padding: 10px 60px 10px 20px;
+  }
+  .menu-btn {
+    display: flex;
+  }
+
+  /*animation for menu on click*/
+  
+  .bar1{
+    transform: rotate(45deg) translateX(45%);
+    transition: 1s; 
+  }
+  .bar2{
+    transform: translateX(90%);
+    background-color: rgb(246, 11, 246);
+    visibility: hidden;
+  }
+  .bar3{
+    transform: rotate(-45deg) translateX(45%);
+    transition: 1s;
+  }
+  .onclick-menu{
+    transform: translate(-20%);
+    transition: 1s;
+    width: 2.3rem;
+    padding-right: 17px;
+  
+  }
+  .active {
+    transform: translateX(-100%);
+  }
+  .nav-container {
+    position: fixed;
+    width: 100vw;
+    margin: 0;
+    top: 0;
+    padding: 5px 0 0 0;
+    background-color: #2b2929;
+    border-bottom:1px solid #3e3b3b;
+  }
+}
+
+/* styles for main section in the home page */
+
+.main-section {
+  margin: 3rem 3rem 7rem 3rem;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-top: 4rem;
+}
+.main-item1 {
+  max-width: 400px;
+}
+.main-item1 > p {
+  margin: 1.4rem 0.3rem;
+}
+.main-item1 > * {
+  margin: 0.3rem;
+}
+.know-more-btn {
+  background-color: #6b6a6a41;
+  color: #fff;
+  padding: 0.4rem 1rem;
+  border: 2px solid #007ced;
+  border-radius: 20px;
+  margin-bottom: 1.4rem;
+}
+.know-more-btn:hover {
+  background-color: #007ced;
+}
+hr {
+  border: 1px solid #007ced;
+  background-color: #007ced;
+}
+
+.profile {
+  width: 300px;
+  border: 0.5rem solid #a19e9e73;
+  border-radius: 31% 69% 32% 68% / 54% 48% 52% 46%;
+}
+
+@media (max-width: 500px) {
+  .main-item1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .main-item1 > p {
+    padding: 0;
+    margin: 0.4rem;
+  }
+  hr {
+    display: block;
+    width: 300px;
+  }
+  .main-section {
+    flex-flow: column-reverse;
+    align-items: center;
+    margin: 0;
+  }
+  .main-item1 > hr {
+    margin: 0;
+  }
+}
+
+/* style for footer */
+
+.footer-container{
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color:#332f2f5a;
+  flex-wrap: wrap;
+}
+.footer-line{
+  border: 1px solid var(--link-before-hover);
+  background-color: var(--link-before-hover);
+}
+.footer-item1 > a{
+  text-decoration: none;
+  color: var(--link-before-hover);
+  margin: 1rem;
+}
+.footer-item1 > a:hover{
+  color: #fff;
+}
+.icon {
+  visibility: hidden;
+}
+.copyright > i {
+  margin-right: 5px;
+}
+
+/*responsive style for footer*/
+
+@media (max-width:500px){
+  .footer-container{
+    justify-content: space-around;
+    align-items: center;
+  }
+  .footer-item1{
+    margin-bottom: 1.3rem;
+  }
+  .icon{
+    visibility: visible;
+  }
+  .footer-link-text{
+    display: none;
+  }
+}
+
+.act{
+  color: var(--heading-text-font-color);
+  text-decoration: underline;
+  text-decoration-color: #007ced;
+  text-underline-offset: .4rem;
+}

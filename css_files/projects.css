@@ -1,0 +1,300 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", Helvetica, sans-serif;
+}
+:root {
+    --primary-bg-color: #222222;
+    --primary-text-font-color: #ffffffc0;
+    --heading-text-font-color: #fff;
+    --link-before-hover: #95989e;
+  }
+  /* style for whole body */
+  body {
+    font-family: "poppins", Helvetica, sans-serif;
+    color: var(--primary-text-font-color);
+    background-color: var(--primary-bg-color);
+  }
+/* Navigation header container styles */
+.header{
+    margin: 1rem;
+  }
+  .logoimg {
+    width: 2.5rem;
+    border-radius: 50%;
+    margin-left: 1rem;
+  }
+  .nav-container {
+    display: flex;
+    align-items: center;
+    background-color: var(--primary-bg-color);
+    margin-top: 5px;
+  }
+  .logotext {
+    flex: 1;
+    margin-bottom: 3px;
+    margin-left: 0.3rem;
+    color: var(--heading-text-font-color);
+  }
+  .nav-links > span {
+    margin-right: 2rem;
+  }
+  .nav-links > span > a {
+    text-decoration: none;
+    color: #95989e;
+  }
+  .nav-links > span > a:hover {
+    color: #fff;
+  }
+  /* for hamburger btn through css only */
+  .menu-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 2rem;
+    margin-right: 1rem;
+    border-radius: 10%;
+  }
+  .menu-btn:hover {
+    background-color: rgba(212, 188, 188, 0.219);
+  }
+  .bar {
+    width: 30px;
+    background-color: var(--heading-text-font-color);
+    height: 4px;
+    border-radius: 10%;
+    margin: 3px 6px;
+    transition:.5s;
+  }
+  .menu-btn {
+    display: none;
+  }
+  
+  /* for mobile responsive nav bar*/
+  /* using media query for to look good for small screens */
+  @media (max-width: 500px) {
+    .header{
+      margin: 0;
+    }
+    .nav-links {
+      position: fixed;
+      height: 100vh;
+      top: 50px;
+      right: -150px;
+      background-color: var(--primary-bg-color);
+      display: flex;
+      flex-direction: column;
+      transition: 1s;
+    }
+  
+    .nav-links > span {
+      margin-right: 0;
+    }
+    .nav-links > span > a {
+      display: block;
+      padding: 10px 60px 10px 20px;
+    }
+    .menu-btn {
+      display: flex;
+    }
+  
+    /*animation for menu on click*/
+    
+    .bar1{
+      transform: rotate(45deg) translateX(45%);
+      transition: 1s; 
+    }
+    .bar2{
+      transform: translateX(90%);
+      background-color: rgb(246, 11, 246);
+      visibility: hidden;
+    }
+    .bar3{
+      transform: rotate(-45deg) translateX(45%);
+      transition: 1s;
+    }
+    .onclick-menu{
+      transform: translate(-20%);
+      transition: 1s;
+      width: 2.3rem;
+      padding-right: 17px;
+    
+    }
+    .active {
+      transform: translateX(-100%);
+    }
+    .nav-container {
+      position: fixed;
+      width: 100vw;
+      margin: 0;
+      top: 0;
+      padding: 5px 0 0 0;
+      background-color: #2b2929;
+      border-bottom:1px solid #3e3b3b;
+      z-index: 1;
+    }
+  }
+
+  /*this section is only for project page*/
+
+.row-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+.card-container{
+    padding: 1.5rem;
+    border-radius: 61px;
+    background: linear-gradient(145deg, #1f1f1f, #242424);
+    box-shadow:  5px 5px 0px #0e0e0e,
+             -5px -5px 0px #363636;
+    
+}
+.img-item{
+    border-bottom: 2px solid #08FDD8;
+}
+img{
+    display: inline-block;
+    width: 40vw;
+}
+
+.btn-container{
+    display: flex;
+    justify-content: space-between;
+}
+.card-detail{
+    padding:1rem 2rem; 
+    width: 40vw; 
+}
+.title{
+    font-size:x-large;
+    color: rgba(255, 255, 255, 0.813);
+}
+.language > span{
+    display: inline-block;
+    margin:.2rem 0;
+    background-color: #5b765696;
+    color: #08FDD8;
+    border: 1px solid #08FDD8;
+    padding: .1rem .4rem;
+    border-radius: 20%;
+}
+
+.link-flex-container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    margin-left: 2px;
+}
+.link-flex-container > a{
+    text-decoration: none;
+    color: #08FDD8;
+    border: solid #08FDD8;
+    padding: .2rem 1rem;
+    letter-spacing: .4px;
+}
+.link-flex-container > a:hover{
+    background-color: #08FDD8;
+    color:black;
+}
+.live-view-link{
+  position: relative;
+}
+.live-view-link::before{
+  content: '';
+  width: 0px;
+  height: 100%;
+  background-color: var(--aqua-color);
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all .5s;
+}
+.live-view-link:hover::before{
+  width: 100%;
+  z-index: -1;
+  transition: all .5s;
+}
+.live-view-link:hover{
+  color:black;
+  z-index: 1;
+}
+/*media query for resizing img in card using width vw*/
+@media (max-width:500px){
+    img{
+        width:80vw;
+    }
+    .link-flex-container{
+        margin-top: 1rem;
+    }
+    .card-detail{
+        width: 80vw;
+        font-size: .8rem;
+        padding: .5rem;
+    }
+    .card-container{
+        margin: 1.5rem ;
+    }
+    .row-container{
+        margin-top: 2.5rem;
+    }
+    .link-flex-container > a{
+      padding: 2px 5px;
+    }
+}
+
+/* style for footer ** copied from learn.css*/
+
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color:#332f2f5a;
+    flex-wrap: wrap;
+  }
+  .footer-line{
+    border: 1px solid var(--link-before-hover);
+    background-color: var(--link-before-hover);
+  }
+  .footer-item1 > a{
+    text-decoration: none;
+    color: var(--link-before-hover);
+    margin: 1rem;
+  }
+  .footer-item1 > a:hover{
+    color: #fff;
+  }
+  .icon {
+    visibility: hidden;
+  }
+  .copyright > i {
+    margin-right: 5px;
+  }
+  
+  /*responsive style for footer*/
+  
+  @media (max-width:500px){
+    .footer-container{
+      justify-content: space-around;
+      align-items: center;
+    }
+    .footer-item1{
+      margin-bottom: 1.3rem;
+    }
+    .icon{
+      visibility: visible;
+    }
+    .footer-link-text{
+      display: none;
+    }
+  }
+
+  .act{
+    color: var(--heading-text-font-color);
+    text-decoration: underline;
+    text-decoration-color: #007ced;
+    text-underline-offset: .4rem;
+  }
