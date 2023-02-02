@@ -156,6 +156,8 @@ body {
   margin: 0.3rem;
 }
 .know-more-btn {
+  display: inline-block;
+  text-decoration: none;
   background-color: #6b6a6a41;
   color: #fff;
   padding: 0.4rem 1rem;
@@ -187,7 +189,7 @@ hr {
   .main-item1 > p {
     padding: 0;
     margin: 0.9rem;
-    
+
   }
   hr {
     display: block;

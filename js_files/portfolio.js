@@ -25,3 +25,6 @@ function remlinkstyle(){
         element.classList.remove('act');
     })
 }
+// to change the footer mistake
+let footele = document.querySelector('.copyright')
+footele.innerHTML = '<i class="fa-regular fa-copyright"></i>2023 All rights reserved.'
