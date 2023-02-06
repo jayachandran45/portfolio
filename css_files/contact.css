@@ -289,7 +289,7 @@ input:focus,textarea:focus{
     }
   }
 
-  .act{
+  #act{
     color: var(--heading-text-font-color);
     text-decoration: underline;
     text-decoration-color: #007ced;

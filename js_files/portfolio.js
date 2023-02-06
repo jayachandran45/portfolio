@@ -12,19 +12,6 @@ menuele.addEventListener("click", function () {
   menuele.classList.toggle("onclick-menu");
 });
 
-// Get all the navbar links
-const ele = document.querySelectorAll('.nav-link');
-ele.forEach(element => {
-    element.addEventListener('click',()=>{
-        remlinkstyle();
-        element.classList.add('act');
-    })
-});
-function remlinkstyle(){
-    ele.forEach(element => {
-        element.classList.remove('act');
-    })
-}
 // to change the footer mistake
 let footele = document.querySelector('.copyright')
 footele.innerHTML = '<i class="fa-regular fa-copyright"></i>2023 All rights reserved.'
