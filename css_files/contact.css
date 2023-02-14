@@ -291,9 +291,10 @@ input:focus,textarea:focus{
 
   #act{
     color: var(--heading-text-font-color);
-    text-decoration: underline;
+    text-decoration: underline .15rem;
     text-decoration-color: #007ced;
     text-underline-offset: .4rem;
-  font-weight: 600;}
+    font-weight: 600;
+}
 
   

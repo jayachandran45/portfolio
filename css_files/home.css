@@ -151,9 +151,11 @@ body {
 }
 .main-item1 > p {
   margin: 1.4rem 0.3rem;
+  letter-spacing: .8px;
 }
 .main-item1 > * {
   margin: 0.3rem;
+  letter-spacing: 1px;
 }
 .know-more-btn {
   display: inline-block;
@@ -189,7 +191,6 @@ hr {
   .main-item1 > p {
     padding: 0;
     margin: 0.9rem;
-
   }
   hr {
     display: block;
@@ -254,7 +255,7 @@ hr {
 
 .act{
   color: var(--heading-text-font-color);
-  text-decoration: underline;
+  text-decoration: underline .15rem;
   text-decoration-color: #007ced;
   text-underline-offset: .4rem;
   font-weight: 600;

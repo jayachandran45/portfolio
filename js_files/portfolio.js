@@ -15,3 +15,9 @@ menuele.addEventListener("click", function () {
 // to change the footer mistake
 let footele = document.querySelector('.copyright')
 footele.innerHTML = '<i class="fa-regular fa-copyright"></i>2023 All rights reserved.'
+
+// custom styles for good looking websites this can be also done by html and css but need to change in every file so i added only in js so it can override html and css
+
+const navlinks = document.querySelector('.nav-links')
+navlinks.style.fontSize = "18px"
+navlinks.style.letterSpacing = "1px"

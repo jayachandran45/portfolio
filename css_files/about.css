@@ -142,6 +142,7 @@
 .heading{
   display: inline-block;
   color: #fff;
+  letter-spacing: .8px;
 }
 .heading::after{
   content: "";
@@ -159,7 +160,6 @@
     display: block;
     position: relative;
     top: 33px;
-    
 }
 
 .border-layout{
@@ -194,6 +194,7 @@
 }
 .inner-title-flex > h4 {
   color: rgb(235, 229, 229);
+  letter-spacing: 2px;
 }
 .inner-title-flex > p {
   color: rgb(138, 132, 132);
@@ -234,10 +235,12 @@
 .row1flex-container > div > h3 {
   color: rgb(247, 239, 239);
   font-size: 1.1rem;
+  letter-spacing: .8px;
 }
 .row1flex-container > div > p {
   margin-top: 5px;
   font-size: .85rem;
+  letter-spacing: .6px;
 }
 .row1flex-container{
   display: flex;
@@ -363,8 +366,8 @@
 
 #act{
   color: var(--heading-text-font-color);
-  text-decoration: underline;
+  text-decoration: underline .15rem ;
   text-decoration-color: #007ced;
   text-underline-offset: .4rem;
-font-weight: 600;
+  font-weight: 600;
 }
